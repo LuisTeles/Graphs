@@ -6,6 +6,12 @@
 #include <string>
 using namespace std;
 
+// Um turista esta planejando seu roteiro de viagem. Considerando que ele só quer visitar uma lista de cidades com um determinado nível de IDH ou maior, desenvolva um código para ajudar ele a definir quanto de combustível ele precisa comprar. Ou seja, dado a cidade de origem e a cidade de destino, calcule e retorne a distância mínima para fazer essa rota.
+
+// A entrada começa com um inteiro C que é o número de cidades a serem consideradas. Nas C linhas seguintes são dadas as informações de cada cidade: uma string contendo o nome da cidade e um número real que é o IDH da cidade (cada cidade deve ter um código automático que um número inteiro de 0 a C-1 dado na ordem em que a cidade foi inserida). Em seguida é informado um numero E, que é o número de estradas que conectam as C cidades. As próximas E linhas contêm três inteiros Co, Cd e D que são respectivamente o código da cidade de origem, o código da cidade de destino e a distância de cada uma das E estradas (todas as estradas permitem navegação nos dois sentidos). Por fim, são informados dois inteiros Vo e Vd que representam o código da cidade origem e o código da cidade de destino da viagem e um número real H que representa o IDH mínimo que uma cidade precisa ter para ser considerada na rota.
+
+// A saída deve ser um inteiro representando a menor rota para sair da cidade Vo e chegar na cidade Vd passando apenas por cidades com um IDH maior que H.
+
 int dijkstra_matriz(int matriz_adj[MAXV][MAXV], int vertices, int origem, int destino, bool visitado[])
 {
     int pai[MAXV], melhor_distancia[MAXV], atual, melhor_distancia_atual;
